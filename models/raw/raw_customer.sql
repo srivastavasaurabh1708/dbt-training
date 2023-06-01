@@ -3,6 +3,7 @@
         materialized='table'
     )
 }}
-SELECT * 
+SELECT CUSTOMERID,CUSTOMERNAME,SEGMENT,COUNTRY,STATE
 FROM 
-{{ source('globalmart', 'customer') }}
+{{ source('globalmart_final', 'CUSTOMER') }}
+WHERE _FIVETRAN_DELETED = 'FALSE';
