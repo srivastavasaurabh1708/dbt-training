@@ -1,14 +1,8 @@
 version: 2
 
 sources:
-  - name: globalmart_final
-    database: raw
-    schema: globalmart_final
-    tables:
-      - name: customer
-      - name: orders
-      - name: product
-  - name: SNOWFLAKE_DB_GLOBALMART
+
+  - name: GLOBALMART
     database: PC_FIVETRAN_DB
     schema: SNOWFLAKE_DB_GLOBALMART
     tables:

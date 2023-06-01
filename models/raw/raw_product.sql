@@ -5,4 +5,4 @@
 }}
 SELECT * 
 FROM 
-{{ source('GLOBALMART_FINAL', 'V_PRODUCT_FINAL') }}
+{{ source('GLOBALMART', 'V_PRODUCT_FINAL') }}
