@@ -39,4 +39,4 @@ models:
     staging:
         +materialized: view
     reporting:
-        +materialized: table
+      schema: final_agg

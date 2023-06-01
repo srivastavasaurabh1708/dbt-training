@@ -1,10 +1,13 @@
+
 {{ 
     config(
-    materialized='table',
+    materialized='incremental',
     database='Reporting',
     schema='final_agg',
-    alias='profit_by_product'
-   )
+    alias='profit_by_product',
+    pre_hook=["delete from {{ this }}"]
+
+   ) 
 }}
 SELECT
 productid,
