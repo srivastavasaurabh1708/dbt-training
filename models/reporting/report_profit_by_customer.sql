@@ -1,7 +1,10 @@
-{{
+{{ 
     config(
-        materialized='table'
-    )
+    materialized='table',
+    database='Reporting',
+    schema='final_agg',
+    alias='profit_by_customer'
+   )
 }}
 SELECT
 customerid,
