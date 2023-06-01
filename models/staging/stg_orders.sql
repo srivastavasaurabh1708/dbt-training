@@ -1,3 +1,10 @@
+{{ 
+    config(
+    materialized='view',
+    schema='GLOBALMART_FINAL',
+    alias='V_STG_ORDERS'
+   )
+}}
 SELECT 
 -- from raw_orders
 o.orderid,
@@ -15,6 +22,6 @@ p.productid,
 p.category,
 p.productname,
 p.subcategory
-from {{ ref('raw_orders') }} o
-LEFT JOIN {{ ref('raw_customer') }} c ON o.customerid = c.customerid
-LEFT JOIN {{ ref('raw_product') }} p ON o.productid = p.productid
+from {{ ref('v_orders') }} o
+LEFT JOIN {{ ref('v_customer') }} c ON o.customerid = c.customerid
+LEFT JOIN {{ ref('v_product') }} p ON o.productid = p.productid

@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: globalmart
+  - name: globalmart_fivetran
     database: PC_FIVETRAN_DB
     schema: SNOWFLAKE_DB_GLOBALMART
     tables:
