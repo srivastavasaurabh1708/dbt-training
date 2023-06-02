@@ -1,7 +1,8 @@
 {{ 
     config(
     materialized='view',
-    schema='GLOBALMART_FINAL',
+    database='PC_FIVETRAN_DB',
+    schema='Globalmart_v',
     alias='V_STG_ORDERS'
    )
 }}
